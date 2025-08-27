@@ -9,9 +9,9 @@ print(fruits [0])
 
 student_dct = [
 
-    {"name":"Anna", "age:"33", "grade":"middle"}
-    {"name":"Valeria", "age:"39", "grade":"senior"}
-    {"name":"Petr", "age:"27", "grade":"junior"}
+    {"name":"Anna", "age:"33", "grade":"middle"},
+    {"name":"Valeria", "age:"39", "grade":"senior"},
+    {"name":"Petr", "age:"27", "grade":"junior"},
      
     ]
 
@@ -36,10 +36,10 @@ print("Уникальные слова:", unique_words)
 #  Программа должна выводить всех студентов, их возраста и оценки, а также производить операции над этими данными.
 
 students_dct = [
-    {"name": "Hanna", "age": 33, "marks": 8}
-    {"name": "Petr", "age": 41, "marks": 9}
-    {"name": "Radoslaw", "age": 24, "marks": 10}
-    {"name": "Dorota", "age": 24, "marks": 67
+    {"name": "Hanna", "age": "33", "marks": "8"},
+    {"name": "Petr", "age": "41", "marks": "9"},
+    {"name": "Radoslaw", "age": "24", "marks": "10"},
+    {"name": "Dorota", "age": "24", "marks": "67"},
 ]
 
 for student in student_dct
