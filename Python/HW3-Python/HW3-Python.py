@@ -66,7 +66,7 @@ b = int(input("Введите число b (b > a): "))
 even_number = 0
 odd_number = 0
 
-for i in range(a, b+1)
+for i in range(a, b+1):
     if i % 2 == 0:
         even_number = even_number + 1
     else :
