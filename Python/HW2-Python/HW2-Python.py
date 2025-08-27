@@ -39,7 +39,7 @@ while True:
         break
 
     if numbers(float): # не знаю, как правильно проверить, что введенное значение является float?
-         summ += number
+        summ += number
         count += 1
     else:
         print("Введите корректное число или 'stop' для выхода.")
