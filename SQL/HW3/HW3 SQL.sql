@@ -6,7 +6,7 @@ FROM public.film f
 JOIN public.language l ON f.language_id = l.language_id
 JOIN public.film_category fc ON f.film_id = fc.film_id
 JOIN public.category c ON fc.category_id = c.category_id
-WHERE c.name = 'Action' AND l.name = 'English'
+WHERE lower (c.name)= 'action' AND lower (l.name) = 'english'
 ORDER BY f.release_year DESC
 LIMIT 20;
 
@@ -18,7 +18,7 @@ SELECT c.first_name, c.last_name, ci.city
 FROM public.customer c
 JOIN public.address a ON c.address_id = a.address_id
 JOIN public.city ci ON a.city_id =  ci.city_id 
-WHERE ci.city  LIKE 'A%'
+WHERE lower (ci.city)  LIKE 'a%'
 ORDER BY c.last_name ASC 
 LIMIT 25;
 
@@ -44,7 +44,7 @@ SELECT f.title, a.first_name, a.last_name
 FROM public.film f 
 JOIN public.film_actor fa ON f.film_id = fa.film_id
 JOIN public.actor a ON fa.actor_id = a.actor_id
-WHERE a.last_name = 'MONROE'
+WHERE lower (a.last_name) = 'monroe'
 ORDER BY f.title ASC
 
 -- Задача 5 Показать список клиентов и фильмов, которые они арендовали
