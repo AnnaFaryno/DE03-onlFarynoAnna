@@ -75,17 +75,17 @@ $$;
 --Если операция удаления не удалась, откатите транзакцию.
 
  CREATE TABLE users_backup AS
-SELECT * FROM users WHERE 1=0;  -- создаёт структуру без данных
+SELECT * FROM users WHERE 1=0;       -- создаёт структуру без данных
 
 DO $$
 BEGIN
     BEGIN
-        -- Копируем всех пользователей в резервную таблицу
-        INSERT INTO users_backup
+        
+        INSERT INTO users_backup     -- Копируем всех пользователей в резервную таблицу
         SELECT * FROM users;
 
-        -- Удаляем пользователей со статусом 'inactive'
-        DELETE FROM users
+        
+        DELETE FROM users            -- Удаляем пользователей со статусом 'inactive'
         WHERE status = 'inactive';
 
         COMMIT;
